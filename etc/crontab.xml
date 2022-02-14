@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+	<group id="default">
+        <job instance="Commercers\OrdersPartly\Cron\InvoiceStatus" method="execute" name="commercers_orderspartly_cron_invoice_partly">
+            <config_path>orderspartly/order_status/cron</config_path>
+		</job>
+        <job instance="Commercers\OrdersPartly\Cron\CreditmemoStatus" method="execute" name="commercers_orderspartly_cron_creditmemo_partly">
+            <config_path>orderspartly/order_status/cron</config_path>
+        </job>
+        <job instance="Commercers\OrdersPartly\Cron\ShippingStatus" method="execute" name="commercers_orderspartly_cron_shipping_partly">
+            <config_path>orderspartly/order_status/cron</config_path>
+        </job>
+	</group>
+
+</config>
